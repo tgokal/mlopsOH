@@ -99,7 +99,8 @@ if (args.run_id is not None):
 if (run_id == 'amlcompute'):
     run_id = run.parent.id
 model_name = args.model_name
-metric_eval = "mse"
+metric_eval_auc = "auc"
+metric_eval_f1 = "f1"
 
 allow_run_cancel = args.allow_run_cancel
 # Parameterize the matrices on which the models should be compared
@@ -115,24 +116,26 @@ try:
                 aml_workspace=ws)
 
     if (model is not None):
-        production_model_mse = 10000
-        if (metric_eval in model.tags):
-            production_model_mse = float(model.tags[metric_eval])
-        new_model_mse = float(run.parent.get_metrics().get(metric_eval))
-        if (production_model_mse is None or new_model_mse is None):
-            print("Unable to find", metric_eval, "metrics, "
-                  "exiting evaluation")
+        production_model_auc = 1
+        production_model_f1 = 1
+        if (metric_eval_auc in model.tags) and (metric_eval_f1 in model.tags):
+            production_model_auc = float(model.tags[metric_eval_auc])
+            production_model_f1 = float(model.tags[metric_eval_f1])
+        new_model_auc = float(run.parent.get_metrics().get(metric_eval_auc))
+        new_model_f1 = float(run.parent.get_metrics().get(metric_eval_f1) )
+        if (production_model_auc is None or new_model_auc is None) and (production_model_f1 is None or new_model_f1 is None):
+            print("Unable to find", metric_eval_auc, "and", metric_eval_f1, ", exiting evaluation")
             if((allow_run_cancel).lower() == 'true'):
                 run.parent.cancel()
         else:
             print(
-                "Current Production model mse: {}, "
-                "New trained model mse: {}".format(
-                    production_model_mse, new_model_mse
+                "Current Production model AUC: {}. Current Production model F1 score: {}."
+                "New trained model auc: {}. New trained model F1 score: {}".format(
+                    production_model_auc, new_model_auc, production_model_f1, new_model_f1
                 )
             )
 
-        if (new_model_mse < production_model_mse):
+        if (new_model_auc < production_model_auc) and (new_model_f1 < production_model_f1):
             print("New trained model performs better, "
                   "thus it should be registered")
         else:
