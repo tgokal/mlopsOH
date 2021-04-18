@@ -4,9 +4,9 @@ steps:
    pip install lightgbm
   displayName: 'Install lightgbm'
 
-- script: |   
-   flake8 --output-file=lint-testresults.xml --format junit-xml
-  displayName: 'Run lint tests'
+# - script: |   
+#    flake8 --output-file=lint-testresults.xml --format junit-xml
+#   displayName: 'Run lint tests'
 
 - script: |   
    python -m pytest . --cov=driver_training --cov-report=html --cov-report=xml --junitxml=unit-testresults.xml
