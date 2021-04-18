@@ -28,18 +28,18 @@ import joblib
 import os
 from azureml.core.model import Model
 import json
+import time
 
 
 def init():
     # load the model from file into a global object
     global model
-
+    print("model initialized" + time.strftime("%H:%M:%S"))
     # we assume that we have just one model
     # AZUREML_MODEL_DIR is an environment variable created during deployment.
     # It is the path to the model folder
     # (./azureml-models/$MODEL_NAME/$VERSION)
-    model_path = Model.get_model_path(
-        os.getenv("AZUREML_MODEL_DIR").split('/')[-2])
+    model_path = Model.get_model_path(os.getenv("AZUREML_MODEL_DIR").split('/')[-2])
 
     model = joblib.load(model_path)
 
@@ -61,6 +61,11 @@ def run(raw_data, request_headers):
     data = json.loads(raw_data)["data"]
     data = np.array(data)
     result = model.predict(data)
+    info = {
+            "input": raw_data,
+            "output": result.tolist()
+            }
+    print(json.dumps(info))
     # predictions = model.predict(data)
     # predictions = predictions.astype(int)
     # classnames = ['no claim', 'claim']
