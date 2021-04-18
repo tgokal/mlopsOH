@@ -31,14 +31,14 @@ import traceback
 import joblib
 from azureml.core import Run, Experiment, Workspace, Dataset
 from azureml.core.model import Model as AMLModel
-from dotenv import load_dotenv
+#from dotenv import load_dotenv
 
 def main():
 
     run = Run.get_context()
     if (run.id.startswith('OfflineRun')):
         # For local development, set values in this section
-        load_dotenv()
+        #load_dotenv()
         workspace_name = os.environ.get("WORKSPACE_NAME")
         experiment_name = os.environ.get("EXPERIMENT_NAME")
         resource_group = os.environ.get("RESOURCE_GROUP")
