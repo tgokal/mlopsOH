@@ -33,4 +33,4 @@ steps:
     codeCoverageTool: Cobertura
     summaryFileLocation: 'coverage.xml'
     reportDirectory: 'htmlcov'
-    failIfCoverageEmpty: true
+    failIfCoverageEmpty: false
