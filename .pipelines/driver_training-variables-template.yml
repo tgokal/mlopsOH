@@ -22,7 +22,7 @@ variables:
   - name: EXPERIMENT_NAME
     value: mlopspython
   - name: DATASET_NAME
-    value: driver_training_ds
+    value: driver-training
   # Uncomment DATASTORE_NAME if you have configured non default datastore to point to your data
   # - name: DATASTORE_NAME
   #   value: datablobstore
@@ -59,8 +59,8 @@ variables:
 
   # These are the default values set in ml_service\util\env_variables.py. Uncomment and override if desired.
   # Set to false to disable the evaluation step in the ML pipeline and register the newly trained model unconditionally.
-  # - name: RUN_EVALUATION
-  #   value: "true"
+  - name: RUN_EVALUATION
+    value: "false"
   # Set to false to register the model regardless of the outcome of the evaluation step in the ML pipeline.
   # - name: ALLOW_RUN_CANCEL
   #   value: "true"
