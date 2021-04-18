@@ -25,13 +25,13 @@ stages:
         overrideParameters: '-location $(LOCATION) -dbWorkspace $(DATABRICKS_WS_NAME)'
         deploymentMode: 'Incremental'
       displayName: 'Deploy OH resources to Azure'
-    - task: AzurePowerShell@4
-      displayName: 'Create ADF Workspace'
-      inputs:
-        azureSubscription: '$(AZURE_RM_SVC_CONNECTION)'
-        Script: '$(Build.SourcesDirectory)/environment_setup/adf/utils/New-DataFactory.ps1'
-        ScriptArguments: '-ResourceGroupName $(RESOURCE_GROUP) -DataFactoryName $(DATA_FACTORY_NAME) -Location $(LOCATION)'
-        azurePowerShellVersion: LatestVersion
+    # - task: AzurePowerShell@4
+    #   displayName: 'Create ADF Workspace'
+    #   inputs:
+    #     azureSubscription: '$(AZURE_RM_SVC_CONNECTION)'
+    #     Script: '$(Build.SourcesDirectory)/environment_setup/adf/utils/New-DataFactory.ps1'
+    #     ScriptArguments: '-ResourceGroupName $(RESOURCE_GROUP) -DataFactoryName $(DATA_FACTORY_NAME) -Location $(LOCATION)'
+    #     azurePowerShellVersion: LatestVersion
     - task: AzureCLI@1
       displayName: 'Register EventGrid'
       inputs:
