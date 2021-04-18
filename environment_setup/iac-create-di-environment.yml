@@ -29,7 +29,7 @@ stages:
       displayName: 'Create ADF Workspace'
       inputs:
         azureSubscription: '$(AZURE_RM_SVC_CONNECTION)'
-        csmFile: '$(Build.SourcesDirectory)/adf/utils/New-DataFactory.ps1'
+        Script: '$(Build.SourcesDirectory)/adf/utils/New-DataFactory.ps1'
         ScriptArguments: '-ResourceGroupName $(RESOURCE_GROUP) -DataFactoryName $(DATA_FACTORY_NAME) -Location $(LOCATION)'
         azurePowerShellVersion: LatestVersion
     - task: AzureCLI@1
