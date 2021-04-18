@@ -1,5 +1,10 @@
 # Pipeline template to run linting, unit tests with code coverage, and publish the results.
 steps:
+
+- script: |   
+   pip install scikit-learn
+  displayName: 'Install scikit-learn'
+
 - script: |   
    pip install lightgbm
   displayName: 'Install lightgbm'
