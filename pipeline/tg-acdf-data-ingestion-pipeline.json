@@ -1,0 +1,43 @@
+{
+	"name": "tg-acdf-data-ingestion-pipeline",
+	"properties": {
+		"description": "Data Ingestion Pipeline",
+		"activities": [
+			{
+				"name": "PrepareData",
+				"description": "Data processing",
+				"type": "DatabricksNotebook",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"notebookPath": "/Shared/devops-ds/data-prepare",
+					"baseParameters": {
+						"data_file_name": "porto_seguro_safe_driver_prediction_input.csv",
+						"input_mount_point_name": "/mnt/inputdata",
+						"training_mount_point_name": "/mnt/trainingdata",
+						"testing_mount_point_name": "/mnt/testingdata"
+					},
+					"libraries": [
+						{
+							"pypi": {
+								"package": "lightgbm"
+							}
+						}
+					]
+				},
+				"linkedServiceName": {
+					"referenceName": "AzureDatabricks",
+					"type": "LinkedServiceReference"
+				}
+			}
+		],
+		"annotations": []
+	}
+}
