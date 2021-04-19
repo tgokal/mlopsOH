@@ -3,7 +3,7 @@
 	"contentVersion": "1.0.0.0",
 	"parameters": {
 		"factoryName": {
-			"value": "refmlops-adf"
+			"value": "tg-acdf"
 		},
 		"AzureDatabricks_accessToken": {
 			"value": ""
@@ -33,7 +33,7 @@
 			"value": "0fe1cc35-0cfa-4152-97d7-5dfb45a8d4ba"
 		},
 		"AzureMLService_properties_typeProperties_resourceGroupName": {
-			"value": "devops-ds-oh-rg"
+			"value": "tg-mlops-RG"
 		},
 		"AzureMLService_properties_typeProperties_servicePrincipalId": {
 			"value": "6e85e789-3b22-4edb-89d0-2ab7fc09d488"
