@@ -45,7 +45,7 @@
 		},
 		"AzureMLService_properties_typeProperties_resourceGroupName": {
 			"type": "string",
-			"defaultValue": "devops-ds-oh-rg"
+			"defaultValue": "tg-mlops-RG"
 		},
 		"AzureMLService_properties_typeProperties_servicePrincipalId": {
 			"type": "string",
@@ -57,7 +57,7 @@
 		},
 		"OnDataDrop_properties_typeProperties_scope": {
 			"type": "string",
-			"defaultValue": "/subscriptions/2dde3eaa-de32-4028-9a7d-032bde54b663/resourceGroups/ref-mlopspython-rg/providers/Microsoft.Storage/storageAccounts/refmlopsamlsa"
+			"defaultValue": "/subscriptions/2dde3eaa-de32-4028-9a7d-032bde54b663/resourceGroups/tg-mlops-RG/providers/Microsoft.Storage/storageAccounts/tgoamlsa"
 		}
 	},
 	"variables": {
@@ -236,7 +236,7 @@
 				"typeProperties": {
 					"subscriptionId": "[parameters('AzureMLService_properties_typeProperties_subscriptionId')]",
 					"resourceGroupName": "[parameters('AzureMLService_properties_typeProperties_resourceGroupName')]",
-					"mlWorkspaceName": "mlops-AML-WSt",
+					"mlWorkspaceName": "tg-mlops-AML-WSt",
 					"servicePrincipalId": "[parameters('AzureMLService_properties_typeProperties_servicePrincipalId')]",
 					"servicePrincipalKey": {
 						"type": "SecureString",

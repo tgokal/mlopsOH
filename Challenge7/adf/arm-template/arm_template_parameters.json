@@ -42,7 +42,7 @@
 			"value": "72f988bf-86f1-41af-91ab-2d7cd011db47"
 		},
 		"OnDataDrop_properties_typeProperties_scope": {
-			"value": "/subscriptions/2dde3eaa-de32-4028-9a7d-032bde54b663/resourceGroups/ref-mlopspython-rg/providers/Microsoft.Storage/storageAccounts/refmlopsamlsa"
+			"value": "/subscriptions/2dde3eaa-de32-4028-9a7d-032bde54b663/resourceGroups/tg-mlops-RG/providers/Microsoft.Storage/storageAccounts/tgoamlsa"
 		}
 	}
 }
