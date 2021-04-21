@@ -3,13 +3,13 @@
 	"contentVersion": "1.0.0.0",
 	"parameters": {
 		"factoryName": {
-			"value": "tg-acdf"
+			"value": "refmlops-adf"
 		},
 		"AzureDatabricks_accessToken": {
-			"value": "dapi3e8f72080c1cb479b335d82d8a61bda7"
+			"value": ""
 		},
 		"AzureMLService_servicePrincipalKey": {
-			"value": "J2e~FM5dH0Z5yMV3E699-1t-on_-DRltyn"
+			"value": ""
 		},
 		"data-ingestion-pipeline_properties_variables_data_file_name_defaultValue": {
 			"value": "porto_seguro_safe_driver_prediction_input.csv"
@@ -24,25 +24,25 @@
 			"value": "/mnt/testingdata"
 		},
 		"data-ingestion-pipeline_properties_variables_ml_pipeline_id_defaultValue": {
-			"value": "6f193fe3-3c4b-4614-a2c7-548cf7f19266"
+			"value": "b07adefa-f77a-4b5f-be8d-1d0ec6b4ab5d"
 		},
 		"data-ingestion-pipeline_properties_variables_databricks_cluster_id_defaultValue": {
-			"value": "0419-061808-rogue320"
+			"value": "0304-001904-vest3"
 		},
 		"AzureMLService_properties_typeProperties_subscriptionId": {
-			"value": "80a3336a-33ac-4098-a7e7-64eb71d80cee"
+			"value": "0fe1cc35-0cfa-4152-97d7-5dfb45a8d4ba"
 		},
 		"AzureMLService_properties_typeProperties_resourceGroupName": {
-			"value": "tg-mlops-RG"
+			"value": "devops-ds-oh-rg"
 		},
 		"AzureMLService_properties_typeProperties_servicePrincipalId": {
-			"value": "05c9bcfb-5980-4001-8bb9-b4fb547492a3"
+			"value": "6e85e789-3b22-4edb-89d0-2ab7fc09d488"
 		},
 		"AzureMLService_properties_typeProperties_tenant": {
 			"value": "72f988bf-86f1-41af-91ab-2d7cd011db47"
 		},
 		"OnDataDrop_properties_typeProperties_scope": {
-			"value": "/subscriptions/80a3336a-33ac-4098-a7e7-64eb71d80cee/resourceGroups/tg-mlops-RG/providers/Microsoft.Storage/storageAccounts/tgoamlsa"
+			"value": "/subscriptions/2dde3eaa-de32-4028-9a7d-032bde54b663/resourceGroups/ref-mlopspython-rg/providers/Microsoft.Storage/storageAccounts/refmlopsamlsa"
 		}
 	}
 }
