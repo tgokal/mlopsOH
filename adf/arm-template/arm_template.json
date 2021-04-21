@@ -5,7 +5,7 @@
 		"factoryName": {
 			"type": "string",
 			"metadata": "Data Factory name",
-			"defaultValue": "refmlops-adf"
+			"defaultValue": "tg-acdf"
 		},
 		"AzureDatabricks_accessToken": {
 			"type": "secureString",
@@ -33,23 +33,23 @@
 		},
 		"data-ingestion-pipeline_properties_variables_ml_pipeline_id_defaultValue": {
 			"type": "string",
-			"defaultValue": "b07adefa-f77a-4b5f-be8d-1d0ec6b4ab5d"
+			"defaultValue": "6f193fe3-3c4b-4614-a2c7-548cf7f19266"
 		},
 		"data-ingestion-pipeline_properties_variables_databricks_cluster_id_defaultValue": {
 			"type": "string",
-			"defaultValue": "0304-001904-vest3"
+			"defaultValue": "0419-061808-rogue320"
 		},
 		"AzureMLService_properties_typeProperties_subscriptionId": {
 			"type": "string",
-			"defaultValue": "0fe1cc35-0cfa-4152-97d7-5dfb45a8d4ba"
+			"defaultValue": "80a3336a-33ac-4098-a7e7-64eb71d80cee"
 		},
 		"AzureMLService_properties_typeProperties_resourceGroupName": {
 			"type": "string",
-			"defaultValue": "devops-ds-oh-rg"
+			"defaultValue": "tg-mlops-RG"
 		},
 		"AzureMLService_properties_typeProperties_servicePrincipalId": {
 			"type": "string",
-			"defaultValue": "6e85e789-3b22-4edb-89d0-2ab7fc09d488"
+			"defaultValue": "05c9bcfb-5980-4001-8bb9-b4fb547492a3"
 		},
 		"AzureMLService_properties_typeProperties_tenant": {
 			"type": "string",
@@ -57,7 +57,7 @@
 		},
 		"OnDataDrop_properties_typeProperties_scope": {
 			"type": "string",
-			"defaultValue": "/subscriptions/2dde3eaa-de32-4028-9a7d-032bde54b663/resourceGroups/ref-mlopspython-rg/providers/Microsoft.Storage/storageAccounts/refmlopsamlsa"
+			"defaultValue": "/subscriptions/80a3336a-33ac-4098-a7e7-64eb71d80cee/resourceGroups/tg-mlops-RG/providers/Microsoft.Storage/storageAccounts/tgoamlsa"
 		}
 	},
 	"variables": {
