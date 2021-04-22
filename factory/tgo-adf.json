@@ -1,0 +1,9 @@
+{
+	"name": "tgo-adf",
+	"location": "westus2",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "19900023-09c3-4508-bac8-638abbabf697",
+		"tenantId": "72f988bf-86f1-41af-91ab-2d7cd011db47"
+	}
+}
