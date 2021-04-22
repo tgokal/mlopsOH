@@ -20,19 +20,19 @@
 					"notebookPath": "/Shared/devops-ds/data-prepare",
 					"baseParameters": {
 						"data_file_name": {
-							"value": "@variables('data_file_name')",
+							"value": "porto_seguro_safe_driver_prediction_input.csv",
 							"type": "Expression"
 						},
 						"input_mount_point_name": {
-							"value": "@variables('input_mount_point_name')",
+							"value": "/mnt/inputdata",
 							"type": "Expression"
 						},
 						"training_mount_point_name": {
-							"value": "@variables('training_mount_point_name')",
+							"value": "/mnt/trainingdata",
 							"type": "Expression"
 						},
 						"testing_mount_point_name": {
-							"value": "@variables('testing_mount_point_name')",
+							"value": "/mnt/testingdata",
 							"type": "Expression"
 						},
 						"adf_run_id": {
