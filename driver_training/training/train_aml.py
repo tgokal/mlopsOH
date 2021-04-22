@@ -38,7 +38,9 @@ def register_dataset(
     datastore_name: str,
     file_path: str
 ) -> Dataset:
+    print(datastore_name)
     datastore = Datastore.get(aml_workspace, datastore_name)
+    print(datastore)
     dataset = Dataset.Tabular.from_delimited_files(path=(datastore, file_path))
     dataset = dataset.register(workspace=aml_workspace,
                                name=dataset_name,
